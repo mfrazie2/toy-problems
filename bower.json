@@ -1,0 +1,22 @@
+{
+  "name": "toy-problems",
+  "homepage": "https://github.com/mfrazie2/toy-problems",
+  "authors": [
+    "Mike Frazier <michael.s.frazier@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "mocha": "^2.4.5",
+    "chai": "^3.5.0"
+  }
+}
