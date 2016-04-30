@@ -2,13 +2,13 @@
 
 Create a function that accepts two parameters (x, y) and returns the sum of all remainders from 1 to _x_ when divided by _y_.
 _____
-###Input: 
+####Input: 
   Arguments will be positive integers
-###Output:
+####Output:
   Integer
-###Constraints:
+####Constraints:
 
-###Edge Cases:
+####Edge Cases:
   Maximum value may be large (consider performance for larger values)
 
 _____
@@ -60,16 +60,23 @@ Sample:
 There is repetition in the remainder pattern.
 
 5 goes into 10 two times and the pattern repeats twice
+
 1 + 2 + 3 + 4 + 0 + 1 + 2 + 3 + 4 + 0
 
+
 6 goes into 15 twice with a remainder of three
+
   The pattern repeats twice
+
 1 + 2 + 3 + 4 + 5 + 0 + 1 + 2 + 3 + 4 + 5 + 0 + 1 + 2 + 3
 
 15 / 6 = 2 [factor]
+
 15 - (6 * 2) = 3 [remainder]
 
+
 IF x > y
+
 Knowing the number of times y goes into x, the sum of remainders from 1 to y can be calculated and multiplied by the number of times 
 y goes into x; then the sum of remainders from 1 to remainder amount is added to the first sum
 
@@ -79,10 +86,13 @@ Sample:
   y = 3
 
 100 / 3 = 33 [factor]
+
 100 - (3 * 33) = 1 [remainder]
 
 1 % 3 = 1
+
 2 % 3 = 2
+
 3 % 3 = 0
 
 33 * (1 + 2 + 0) + 1
@@ -94,20 +104,24 @@ Sample:
   y = 20
 
 10 / 20 = 0.5 [factor]
+
 10 - (20 * 0.5) = 0 [remainder]
 
 1 % 20 = 1
+
 ...
+
 10 % 20 = 10
 
 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10
 
 IF x < y OR x = y
+
 Sum of remainders from 1 to x when divided by y
 
 
 ____________
-
+```
 Define a function that takes two parameters (x, y)
   Check if parameters are NOT number data types
     Throw error
@@ -131,10 +145,10 @@ Define a function that takes two parameters (x, y)
     Call subRoutine(y, x) and assign it to sum
   
   Return sum
+```    
     
     
-    
-
+```
 subRoutine (returns sum from a range 1 -> end (or denominator))
 
 Define a function that takes a two parameters (denominator, end[optional])
@@ -148,6 +162,7 @@ Define a function that takes a two parameters (denominator, end[optional])
     Increase start value by 1
   
   Return sum
+```
 ____________
 
 
@@ -156,14 +171,15 @@ Above works well when values are small but can be optimized
 Summing a range from 1 -> n can be expressed as
 n(n + 1) / 2
 
-
 subRoutine
+```
 
 Define a function that takes one parameter (end) 
   return (end * (end + 1)) / 2
-  
+```  
 
 Main Function
+```
 
 Define a function that takes two parameters (x, y) 
   Check if parameters are NOT number data types
@@ -186,3 +202,4 @@ Define a function that takes two parameters (x, y)
       Call subRoutine(x) and assign it to sum
     
     Return sum
+  ```
