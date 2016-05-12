@@ -34,6 +34,7 @@ Roman Numerals:
 
 
 Example Inputs/Outputs
+
 |  Input   |  Output    |  
 |:----:|:------:|
 |  "I"    |    1   |
