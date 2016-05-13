@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> Implement Maths Operators </title>
+    <link rel="stylesheet" href="../../bower_components/mocha/mocha.css" />
+  </head>
+  
+  <body>
+    <div id="mocha"></div>
+    
+    <!-- Start Scripts -->
+    <script src="../../bower_components/chai/chai.js"></script>
+    <script src="../../bower_components/mocha/mocha.js"></script>
+    <script src="mathsOperators-Solution.js"></script>
+    <script> 
+      mocha.setup('bdd');
+      window.expect = chai.expect;
+    </script>
+    <!-- TESTING SCRIPT GOES HERE -->
+    <script src="specsMathsOperators.js"></script>
+    <script> mocha.run(); </script>
+    <!-- End Scripts -->
+  
+  </body>
+
+</html>
