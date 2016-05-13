@@ -1,0 +1,3 @@
+#Power of 5
+
+Given a number, return a boolean if that value is a power of 5. 
