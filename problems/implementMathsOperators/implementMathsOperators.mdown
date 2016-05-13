@@ -10,3 +10,64 @@ multiply(5, 2) === 10
 divide(5, 2) === 2
 
 modulo(5, 2) === 1
+
+
+Multiplication is addition of a number a certain number of times. 
+5 * 2 is the same thing as: (5 + 5) or (2 + 2 + 2 + 2 + 2)
+
+
+Division is subtraction of the denominator from the numerator so long as the quotient remains above zero. The number of times the denominator goes into the numerator is the value that should be returned. 
+5 / 2 can be considered: 5 - 2 - 2 = 1, count = 2
+
+| Numerator   | Denominator  | Step       | Remainder  |  Count |
+|:----------------:|:------------------:|:-----------:|:---------------:|:---------:|
+|         5          |          2            |              |                     |    0       |
+|         5          |          2            | 5 - 2      |    3               |    1       |
+|         5          |          2            | 3 - 2      |    1               |    2       |
+|         5          |          2            | 1 - 2      |    -1              |    2       |
+
+The last step can be skipped because the denominator is greater than the remainder. So long as the denominator is greater than the remainder, the subtraction step can continue.
+
+If the denominator is zero, then the return is not a number, cannot divide by zero
+
+To Do: Handle negative values
+
+
+Modulo returns the remainder from a division operator. 
+
+| Numerator   | Denominator  | Step       | Remainder  |
+|:----------------:|:------------------:|:-----------:|:---------------:|
+|         5          |          2            |              |                     |
+|         5          |          2            | 5 - 2      |    3               |
+|         5          |          2            | 3 - 2      |    1               |
+
+The denominator is subtracted from the numerator until the denominator is greater than the remainder or the remainder equals zero. 
+---------------------
+
+```
+Declare a function called multiply that takes two numbers as parameters (x, y)
+  Declare a variable called product and set initial value to 1
+  Declare a variable called count and set initial value to 1
+  While count is less than or equal to `y`
+    Add x to product
+  Return product
+```
+
+```
+Declare a function called divide that takes two numbers as parameters (x, y)
+  If `y` equals 0
+    Return not a number
+  Declare a variable called count and set initial value to 0
+  Declare a variable called remainder and set initial value to `x`
+  While remainder is greater than or equal to `y`
+    Subtract `y` from remainder and assign to remainder
+    If remainder is greater than or equal to 0
+      Increase value of count
+  Return count
+```
+
+
+
+
+
+
